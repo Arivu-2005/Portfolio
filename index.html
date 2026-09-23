@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Arivazhagan M — Software Developer, Full Stack Developer and Python Developer from Chennai.">
+  <meta name="author" content="Arivazhagan M">
+  <meta name="theme-color" content="#0a1020">
+
+  <title>Arivazhagan M | Software Developer</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+
+  <script>
+    const root = document.documentElement;
+    root.classList.add("js");
+
+    try {
+      const theme = localStorage.getItem("theme");
+      if (theme === "light" || theme === "dark") {
+        root.setAttribute("data-theme", theme);
+      }
+    } catch (e) {}
+  </script>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+  <div class="container nav-inner">
+
+    <a href="#home" class="logo">
+      Arivazhagan<span>.</span>
+    </a>
+
+    <button class="menu-btn" id="menuBtn" type="button"
+      aria-label="Open navigation" aria-expanded="false">
+      ☰
+    </button>
+
+    <nav id="navMenu">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+
+      <button id="themeBtn" class="theme-btn" type="button">
+        ☀
+      </button>
+    </nav>
+
+  </div>
+</header>
+
+
+<main>
+
+<!-- HERO -->
+<section id="home" class="section hero">
+  <div class="container hero-grid">
+
+    <div class="hero-copy reveal">
+      <span class="eyebrow">Software Developer in Chennai</span>
+
+      <p class="hello">Hello, I'm</p>
+
+      <h1>
+        Arivazhagan <span class="grad-text">M.</span>
+      </h1>
+
+      <h2>
+        Software Developer | Full Stack Developer | Python Developer
+      </h2>
+
+      <p class="lead">
+        Information Technology graduate passionate about building reliable
+        web applications, full-stack systems and AI-powered digital solutions.
+      </p>
+
+      <div class="actions">
+        <a href="#projects" class="btn primary">View Projects</a>
+        <a href="./assets/Arivazhagan_Frontend Developer.pdf"
+           class="btn secondary" download>
+          Download Resume
+        </a>
+      </div>
+
+      <div class="socials">
+        <a href="https://github.com/Arivu-2005"
+           target="_blank" rel="noopener">
+          GitHub
+        </a>
+
+        <a href="https://www.linkedin.com/in/arivazhaganmani/"
+           target="_blank" rel="noopener">
+          LinkedIn
+        </a>
+      </div>
+    </div>
+
+
+    <div class="scene" id="scene" aria-hidden="true">
+      <div class="rig" id="rig">
+        <div class="cube">
+          <div class="core"></div>
+          <div class="face f1">Python</div>
+          <div class="face f2">React</div>
+          <div class="face f3">Flask</div>
+          <div class="face f4">Node.js</div>
+          <div class="face f5">AI / ML</div>
+          <div class="face f6">MongoDB</div>
+        </div>
+      </div>
+
+      <div class="shadow-floor"></div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ABOUT -->
+<section id="about" class="section alt">
+  <div class="container">
+
+    <span class="eyebrow">About</span>
+
+    <h2 class="section-title">
+      Building with purpose, <span>not just code.</span>
+    </h2>
+
+    <div class="about-grid">
+
+      <div class="reveal">
+        <p>
+          I am an Information Technology graduate from Sathyabama Institute
+          of Science and Technology, Chennai, with a strong interest in
+          software engineering and full-stack development.
+        </p>
+
+        <p>
+          My experience spans Python development, modern frontend
+          technologies, backend APIs, databases and AI-based applications.
+        </p>
+      </div>
+
+      <div class="mini-grid reveal">
+
+        <article class="card tilt">
+          <b>Software Development</b>
+          <p>Clean application logic and maintainable development practices.</p>
+        </article>
+
+        <article class="card tilt">
+          <b>Full Stack</b>
+          <p>Frontend, backend, APIs and databases working together.</p>
+        </article>
+
+        <article class="card tilt">
+          <b>AI Applications</b>
+          <p>Computer vision and AI-powered application workflows.</p>
+        </article>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- SKILLS -->
+<section id="skills" class="section">
+  <div class="container">
+
+    <span class="eyebrow">Technical Skills</span>
+    <h2 class="section-title">My technical toolkit.</h2>
+
+    <div class="skills reveal">
+
+      <article class="card tilt">
+        <h3>Frontend</h3>
+        <div class="tags">
+          <span>HTML5</span>
+          <span>CSS3</span>
+          <span>JavaScript</span>
+          <span>React.js</span>
+          <span>Bootstrap</span>
+          <span>Tailwind CSS</span>
+        </div>
+      </article>
+
+      <article class="card tilt">
+        <h3>Backend</h3>
+        <div class="tags">
+          <span>Node.js</span>
+          <span>Express.js</span>
+          <span>Flask</span>
+          <span>REST APIs</span>
+        </div>
+      </article>
+
+      <article class="card tilt">
+        <h3>Programming</h3>
+        <div class="tags">
+          <span>Python</span>
+          <span>JavaScript</span>
+          <span>OOP</span>
+        </div>
+      </article>
+
+      <article class="card tilt">
+        <h3>Databases</h3>
+        <div class="tags">
+          <span>SQL</span>
+          <span>MySQL</span>
+          <span>MongoDB</span>
+          <span>Firebase</span>
+        </div>
+      </article>
+
+      <article class="card tilt">
+        <h3>AI / ML</h3>
+        <div class="tags">
+          <span>TensorFlow</span>
+          <span>OpenCV</span>
+          <span>Computer Vision</span>
+        </div>
+      </article>
+
+      <article class="card tilt">
+        <h3>Tools</h3>
+        <div class="tags">
+          <span>Git</span>
+          <span>GitHub</span>
+          <span>VS Code</span>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- EXPERIENCE -->
+<section id="experience" class="section alt">
+  <div class="container">
+
+    <span class="eyebrow">Experience</span>
+    <h2 class="section-title">Professional journey.</h2>
+
+    <div class="timeline reveal">
+      <article>
+
+        <span class="dot"></span>
+
+        <small>May 2026 – Present</small>
+
+        <h3>Frontend Developer Intern</h3>
+
+        <b>Vita Rail Services Pvt. Ltd., Chennai</b>
+
+        <p>
+          Developing responsive and user-friendly web interfaces using
+          HTML, CSS, JavaScript and Bootstrap.
+        </p>
+
+        <div class="tags">
+          <span>HTML</span>
+          <span>CSS</span>
+          <span>JavaScript</span>
+          <span>Bootstrap</span>
+        </div>
+
+      </article>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- PROJECTS -->
+<section id="projects" class="section">
+  <div class="container">
+
+    <span class="eyebrow">Projects</span>
+    <h2 class="section-title">My works.</h2>
+
+
+    <!-- FILTERS -->
+    <div class="filters">
+
+      <button class="filter active"
+        data-filter="all"
+        aria-pressed="true">
+        All
+      </button>
+
+      <button class="filter"
+        data-filter="ai"
+        aria-pressed="false">
+        AI / ML
+      </button>
+
+      <button class="filter"
+        data-filter="fullstack"
+        aria-pressed="false">
+        Full Stack
+      </button>
+
+      <button class="filter"
+        data-filter="python"
+        aria-pressed="false">
+        Python
+      </button>
+
+      <button class="filter"
+        data-filter="web"
+        aria-pressed="false">
+        Web
+      </button>
+
+    </div>
+
+
+    <!-- PROJECT GRID -->
+    <div class="project-grid">
+
+      <!-- MANN VAASAM -->
+      <article class="project"
+        data-cat="web"
+        data-project="mann">
+
+        <div class="project-img" data-label="Mann-Vaasam">
+          <img src="./assets/mann-vaasam.jpg"
+            alt="Mann-Vaasam">
+        </div>
+
+        <div class="project-body">
+
+          <h3>Mann-Vaasam</h3>
+
+          <p>
+            E-commerce website for product browsing
+            and online shopping.
+          </p>
+
+          <div class="tags">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+          </div>
+
+          <div class="project-links">
+
+            <button class="btn primary case" type="button">
+              Case Study
+            </button>
+
+            <a class="btn secondary ext-link link-code"
+              href="https://github.com/Arivu-2005/Mann-Vaasam"
+              target="_blank" rel="noopener">
+              Source Code ↗
+            </a>
+
+            <a class="btn secondary ext-link link-demo"
+              href="https://mann-vaasam-7kss.vercel.app/" target="_blank" rel="noopener">
+              Live Demo ↗
+            </a>
+
+          </div>
+        </div>
+      </article>
+
+
+      <!-- EMPLOYEE MANAGEMENT -->
+      <article class="project"
+        data-cat="python"
+        data-project="employee">
+
+        <div class="project-img" data-label="Employee Management">
+          <img src="./assets/employee-management.jpg"
+            alt="Employee Management System">
+        </div>
+
+        <div class="project-body">
+
+          <h3>Employee Management System</h3>
+
+          <p>
+            Python application for managing employee
+            records and data.
+          </p>
+
+          <div class="tags">
+            <span>Python</span>
+            <span>SQL</span>
+          </div>
+
+          <div class="project-links">
+
+            <button class="btn primary case" type="button">
+              Case Study
+            </button>
+
+            <a class="btn secondary ext-link link-code"
+              href="https://github.com/Arivu-2005/employee-management-system"
+              target="_blank" rel="noopener">
+              Source Code ↗
+            </a>
+
+            <a class="btn secondary ext-link link-demo"
+              href="https://arivu-2005.github.io/employee-management-system/" target="_blank" rel="noopener">
+              Live Demo ↗
+            </a>
+
+          </div>
+        </div>
+      </article>
+
+
+      <!-- BANK ATM -->
+      <article class="project"
+        data-cat="python"
+        data-project="atm">
+
+        <div class="project-img" data-label="Python Bank ATM">
+          <img src="./assets/bank-atm.jpg"
+            alt="Python Bank ATM">
+        </div>
+
+        <div class="project-body">
+
+          <h3>Python Bank ATM System</h3>
+
+          <p>
+            Python ATM application with basic banking
+            and transaction operations.
+          </p>
+
+          <div class="tags">
+            <span>Python</span>
+            <span>OOP</span>
+          </div>
+
+          <div class="project-links">
+
+            <button class="btn primary case" type="button">
+              Case Study
+            </button>
+
+            <a class="btn secondary ext-link link-code"
+              href="https://github.com/Arivu-2005/atm-machine-python"
+              target="_blank" rel="noopener">
+              Source Code ↗
+            </a>
+
+            <a class="btn secondary ext-link link-demo"
+              href="https://securebank-atm-simulator.vercel.app/" target="_blank" rel="noopener">
+              Live Demo ↗
+            </a>
+
+          </div>
+        </div>
+      </article>
+
+            <!-- GLAUCO VISION -->
+      <article class="project"
+        data-cat="ai"
+        data-project="glauco">
+
+        <div class="project-img" data-label="Glauco Vision">
+          <img src="images/glauco-vision.jpg"
+            alt="Glauco Vision">
+        </div>
+
+        <div class="project-body">
+
+          <h3>Glauco Vision</h3>
+
+          <p>
+            AI glaucoma detection system using Vision Transformer,
+            Flask and Python.
+          </p>
+
+          <div class="tags">
+            <span>Python</span>
+            <span>ViT</span>
+            <span>Flask</span>
+          </div>
+
+          <div class="project-links">
+
+            <button class="btn primary case" type="button">
+              Case Study
+            </button>
+
+            <a class="btn secondary ext-link link-code"
+              href="https://github.com/Arivu-2005/glucovision"
+              target="_blank" rel="noopener">
+              Source Code ↗
+            </a>
+
+            <a class="btn secondary ext-link link-demo"
+              href="#" target="_blank" rel="noopener">
+              Live Demo ↗
+            </a>
+
+          </div>
+        </div>
+      </article>
+
+
+      <!-- FOODIC -->
+      <article class="project"
+        data-cat="fullstack"
+        data-project="foodic">
+
+        <div class="project-img" data-label="FOODIC">
+          <img src="images/foodic.jpg" alt="FOODIC">
+        </div>
+
+        <div class="project-body">
+
+          <h3>FOODIC</h3>
+
+          <p>
+            Food ordering platform using React, Node.js,
+            Express and MongoDB.
+          </p>
+
+          <div class="tags">
+            <span>React</span>
+            <span>Node.js</span>
+            <span>MongoDB</span>
+          </div>
+
+          <div class="project-links">
+
+            <button class="btn primary case" type="button">
+              Case Study
+            </button>
+
+            <a class="btn secondary ext-link link-code"
+              href="https://github.com/Arivu-2005/FOODIC-"
+              target="_blank" rel="noopener">
+              Source Code ↗
+            </a>
+
+            <a class="btn secondary ext-link link-demo"
+              href="#" target="_blank" rel="noopener">
+              Live Demo ↗
+            </a>
+
+          </div>
+        </div>
+      </article>
+      
+      <!-- WEATHER -->
+      <article class="project"
+        data-cat="web"
+        data-project="weather">
+
+        <div class="project-img" data-label="Weather App">
+          <img src="images/weather-app.jpg"
+            alt="Weather Application">
+        </div>
+
+        <div class="project-body">
+
+          <h3>Weather Application</h3>
+
+          <p>
+            Responsive weather application using
+            JavaScript and REST API.
+          </p>
+
+          <div class="tags">
+            <span>JavaScript</span>
+            <span>REST API</span>
+          </div>
+
+          <div class="project-links">
+
+            <button class="btn primary case" type="button">
+              Case Study
+            </button>
+
+            <a class="btn secondary ext-link link-code"
+              href="https://github.com/Arivu-2005/Weather-Application"
+              target="_blank" rel="noopener">
+              Source Code ↗
+            </a>
+
+            <a class="btn secondary ext-link link-demo"
+              href="#" target="_blank" rel="noopener">
+              Live Demo ↗
+            </a>
+
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+
+
+<!-- EDUCATION -->
+<section id="education" class="section alt">
+  <div class="container two-col">
+
+    <div>
+      <span class="eyebrow">Education</span>
+      <h2 class="section-title">Academic foundation.</h2>
+
+      <article class="card education tilt">
+        <small>2022 – 2026</small>
+
+        <h3>B.Tech Information Technology</h3>
+
+        <b>Sathyabama Institute of Science and Technology</b>
+
+        <p>Chennai, Tamil Nadu · CGPA: 7.6 / 10.0</p>
+      </article>
+    </div>
+
+
+    <div>
+      <span class="eyebrow">Certifications</span>
+      <h2 class="section-title">Certifications.</h2>
+
+      <ul class="list">
+        <li>Frontend Development Certification</li>
+        <li>Full Stack Web Development Certification</li>
+        <li>Python Programming Certification</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- RESUME -->
+<section class="section resume">
+  <div class="container resume-box">
+
+    <div>
+      <span class="eyebrow">Resume</span>
+
+      <h2>Ready to build something useful?</h2>
+
+      <p>
+        Explore my complete technical background,
+        projects, education and experience.
+      </p>
+    </div>
+
+    <a href="./assets/Arivazhagan_Frontend Developer.pdf"
+       class="btn light" download>
+      Download Resume
+    </a>
+
+  </div>
+</section>
+
+
+<!-- CONTACT -->
+<section id="contact" class="section">
+  <div class="container">
+
+    <span class="eyebrow">Contact</span>
+
+    <h2 class="section-title">
+      Let's connect and work together.
+    </h2>
+
+    <p class="section-intro">
+      Have a project in mind, an opportunity to discuss,
+      or just want to say hi?
+    </p>
+
+
+    <div class="contact-container">
+
+
+      <!-- CONTACT FORM -->
+      <div class="contact-box">
+
+        <div class="box-title">
+          <div class="icon">
+            <i class="fa-solid fa-paper-plane"></i>
+          </div>
+
+          <div>
+            <h3>Send me a message</h3>
+            <p>I usually reply within 24 hours.</p>
+          </div>
+        </div>
+
+        <hr>
+
+        <form id="contactForm" novalidate>
+
+          <label for="name">Your Name *</label>
+          <input type="text" id="name" name="name"
+            placeholder="e.g. John Doe" required>
+
+          <label for="email">Your Email *</label>
+          <input type="email" id="email" name="email"
+            placeholder="e.g. john@example.com" required>
+
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" name="subject"
+            placeholder="Project inquiry or job opportunity">
+
+          <label for="message">Message *</label>
+          <textarea id="message" name="message"
+            placeholder="Hello Arivazhagan, I'd like to discuss..."
+            required></textarea>
+
+          <button type="submit" class="btn primary send-button">
+            <span>Send Message</span>
+            <i class="fa-solid fa-paper-plane"></i>
+          </button>
+
+          <p id="formNote" class="form-note"></p>
+
+        </form>
+      </div>
+
+
+      <!-- CONTACT INFO -->
+      <div class="contact-box">
+
+        <h3 class="info-title">Contact Information</h3>
+
+        <p class="info-text">
+          Reach out directly through any of these channels.
+        </p>
+
+        <div class="available">
+          <span></span>
+          Available for full-time roles and freelance projects
+        </div>
+
+
+        <!-- EMAIL -->
+        <div class="info-item">
+
+          <div class="info-icon">
+            <i class="fa-solid fa-envelope"></i>
+          </div>
+
+          <div class="info-body">
+            <small>Email Address</small>
+            <strong>arivazhaganmani78@gmail.com</strong>
+          </div>
+
+          <button class="copy-button"
+            type="button"
+            data-copy="arivazhaganmani78@gmail.com">
+            <i class="fa-regular fa-copy"></i>
+          </button>
+
+        </div>
+
+
+        <!-- PHONE -->
+        <div class="info-item">
+
+          <div class="info-icon">
+            <i class="fa-solid fa-phone"></i>
+          </div>
+
+          <div class="info-body">
+            <small>Phone Number</small>
+            <strong>+91 74186 79629</strong>
+          </div>
+
+          <button class="copy-button"
+            type="button"
+            data-copy="+91 74186 79629">
+            <i class="fa-regular fa-copy"></i>
+          </button>
+
+        </div>
+
+
+        <!-- LOCATION -->
+        <div class="info-item">
+
+          <div class="info-icon">
+            <i class="fa-solid fa-location-dot"></i>
+          </div>
+
+          <div class="info-body">
+            <small>Location</small>
+            <strong>Chennai, Tamil Nadu, India</strong>
+          </div>
+
+        </div>
+
+
+        <!-- SOCIAL -->
+        <h4 class="social-title">Social Profiles</h4>
+
+        <div class="social-container">
+
+          <a class="social-link"
+            href="https://linkedin.com/in/arivazhaganmani"
+            target="_blank" rel="noopener">
+
+            <i class="fa-brands fa-linkedin-in"></i>
+
+            <div>
+              <strong>LinkedIn</strong>
+              <span>Connect on LinkedIn</span>
+            </div>
+
+          </a>
+
+
+          <a class="social-link"
+            href="https://github.com/Arivu-2005"
+            target="_blank" rel="noopener">
+
+            <i class="fa-brands fa-github"></i>
+
+            <div>
+              <strong>GitHub</strong>
+              <span>View GitHub Profile</span>
+            </div>
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+</main>
+
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    © <span id="year">2026</span> Arivazhagan M.
+    All rights reserved.
+  </div>
+</footer>
+
+
+<!-- CASE STUDY MODAL -->
+<div class="modal"
+  id="modal"
+  role="dialog"
+  aria-modal="true"
+  aria-hidden="true">
+
+  <div class="modal-box">
+
+    <button class="close"
+      id="closeModal"
+      type="button">
+      ✕
+    </button>
+
+    <span class="eyebrow" id="mCat"></span>
+
+    <h3 id="mTitle"></h3>
+
+    <dl class="case-list">
+
+      <div>
+        <dt>Problem</dt>
+        <dd id="mProblem"></dd>
+      </div>
+
+      <div>
+        <dt>Solution</dt>
+        <dd id="mSolution"></dd>
+      </div>
+
+      <div>
+        <dt>Tech Used</dt>
+        <dd id="mTech"></dd>
+      </div>
+
+      <div>
+        <dt>Key Features</dt>
+        <dd id="mFeatures"></dd>
+      </div>
+
+    </dl>
+
+    <div class="modal-links">
+
+      <a class="btn primary ext-link"
+        id="mCode"
+        href="#"
+        target="_blank"
+        rel="noopener">
+        Source Code ↗
+      </a>
+
+      <a class="btn secondary ext-link"
+        id="mDemo"
+        href="#"
+        target="_blank"
+        rel="noopener">
+        Live Demo ↗
+      </a>
+
+    </div>
+
+  </div>
+</div>
+
+
+<!-- TOAST -->
+<div id="messageBox">
+  <i class="fa-solid fa-check"></i>
+  <span id="toastText"></span>
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
