@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arivazhagan M | Full Stack Developer Portfolio</title>
+    <meta name="description" content="Portfolio of Arivazhagan M, Full Stack and Frontend Developer.">
+    <meta name="theme-color" content="#0f172a">
+
+    <!-- Fonts + icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Your styles -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- If JavaScript is off, show everything (otherwise .reveal items stay hidden) -->
+    <noscript><style>.reveal { opacity: 1 !important; transform: none !important; }</style></noscript>
+</head>
+
+<body>
+    <a href="#home" class="skip-link">Skip to content</a>
+
+    <!-- ========== NAVBAR ========== -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="#home" class="logo">Arivazhagan <span>M</span></a>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#certifications">Achievements</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <main>
+        <!-- ========== HOME ========== -->
+        <section id="home" class="hero">
+            <div class="container hero-container">
+
+                <div class="hero-content reveal">
+                    <p class="greeting">Hello, I'm</p>
+                    <h1 class="name">Arivazhagan M</h1>
+                    <h2 class="role">
+                        Full Stack Developer <span class="divider">|</span> Frontend Developer
+                    </h2>
+                    <p class="summary">
+                        B.Tech Information Technology graduate with hands-on experience building
+                        responsive web applications using React.js, Python, Flask, and MongoDB.
+                        Passionate about user-friendly interfaces and scalable backend solutions.
+                    </p>
+
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary">View My Work</a>
+                        <a href="#contact" class="btn btn-outline">Contact Me</a>
+                    </div>
+
+                    <div class="social-links">
+                        <a href="https://github.com/Arivu-2005" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <!-- TODO: replace "yourname" with your real LinkedIn username -->
+                        <a href="https://www.linkedin.com/in/arivazhaganmani/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <!-- TODO: replace with your real email -->
+                        <a href="mailto:your.email@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+
+                <div class="hero-image-container reveal">
+                    <div class="image-wrapper" id="imageWrapper">
+                        <!-- Put your photo next to this file and name it profile.jpg -->
+                        <img src="profile.jpg" alt="Photo of Arivazhagan M" class="profile-photo" id="profilePhoto">
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ========== ABOUT ========== -->
+        <section id="about" class="section">
+            <div class="container">
+                <h2 class="section-title reveal">About <span>Me</span></h2>
+
+                <div class="about-content reveal">
+                    <p class="about-text">
+                        I am an upcoming IT graduate seeking an entry-level Full Stack Developer role.
+                        I work on both frontend and backend, and I have built responsive e-commerce
+                        platforms and web applications with modern tech stacks.
+                    </p>
+
+                    <div class="education-card">
+                        <h3><i class="fas fa-graduation-cap"></i> Education</h3>
+
+                        <h4>B.Tech – Information Technology</h4>
+                        <p class="institution">Sathyabama Institute of Science and Technology – Chennai</p>
+                        <p class="highlight">2022 – 2026</p>
+                        <p class="highlight">CGPA: 7.6 / 10.0</p>
+                        <p class="coursework">
+                            <strong>Relevant Coursework:</strong>
+                            Object-Oriented Programming, Data Structures &amp; Algorithms,
+                            Database Management Systems, SDLC.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== SKILLS ========== -->
+        <section id="skills" class="section bg-secondary">
+            <div class="container">
+                <h2 class="section-title reveal">Technical <span>Skills</span></h2>
+
+                <!--
+                    HOW SKILL BARS WORK:
+                    data-level="90" => bar fills to 90% when it scrolls into view (script.js)
+                -->
+                <div class="skills-grid">
+
+                    <div class="skill-category reveal">
+                        <h3><i class="fas fa-laptop-code"></i> Frontend Development</h3>
+
+                        <div class="skill-bar">
+                            <div class="skill-info"><span>HTML5 &amp; CSS3</span><span>90%</span></div>
+                            <div class="progress-line"><span data-level="90"></span></div>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-info"><span>JavaScript</span><span>85%</span></div>
+                            <div class="progress-line"><span data-level="85"></span></div>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-info"><span>React.js</span><span>75%</span></div>
+                            <div class="progress-line"><span data-level="75"></span></div>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-info"><span>Bootstrap &amp; Responsive UI</span><span>85%</span></div>
+                            <div class="progress-line"><span data-level="85"></span></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-category reveal">
+                        <h3><i class="fas fa-server"></i> Backend &amp; Databases</h3>
+
+                        <div class="skill-bar">
+                            <div class="skill-info"><span>Python</span><span>85%</span></div>
+                            <div class="progress-line"><span data-level="85"></span></div>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-info"><span>Flask</span><span>75%</span></div>
+                            <div class="progress-line"><span data-level="75"></span></div>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-info"><span>SQL &amp; MySQL</span><span>80%</span></div>
+                            <div class="progress-line"><span data-level="80"></span></div>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-info"><span>MongoDB</span><span>75%</span></div>
+                            <div class="progress-line"><span data-level="75"></span></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-category full-width reveal">
+                        <h3><i class="fas fa-tools"></i> Tools &amp; Core Concepts</h3>
+                        <div class="tags-container">
+                            <span class="skill-tag">Object-Oriented Programming (OOP)</span>
+                            <span class="skill-tag">Data Structures &amp; Algorithms</span>
+                            <span class="skill-tag">DBMS</span>
+                            <span class="skill-tag">CRUD Operations</span>
+                            <span class="skill-tag">Git</span>
+                            <span class="skill-tag">GitHub</span>
+                            <span class="skill-tag">VS Code</span>
+                            <span class="skill-tag">SDLC</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== EXPERIENCE ========== -->
+        <section id="experience" class="section">
+            <div class="container">
+                <h2 class="section-title reveal">Work <span>Experience</span></h2>
+
+                <div class="timeline">
+                    <div class="timeline-item reveal">
+                        <div class="timeline-dot"></div>
+
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <h3>Frontend Developer Intern</h3>
+                                <span class="date"><i class="far fa-calendar-alt"></i> May 2026 – June 2026</span>
+                            </div>
+
+                            <h4 class="company">Vita Rail Services Pvt. Ltd. | Chennai, Tamil Nadu</h4>
+
+                            <ul class="responsibilities">
+                                <li>Developed responsive web pages using HTML5, CSS3, JavaScript, and Bootstrap.</li>
+                                <li>Designed and refined user interfaces focusing on usability and visual consistency.</li>
+                                <li>Improved existing pages through layout updates and responsive design enhancements.</li>
+                                <li>Performed frontend testing and debugging to identify and resolve UI issues.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== PROJECTS ========== -->
+        <section id="projects" class="section bg-secondary">
+            <div class="container">
+                <h2 class="section-title reveal">Featured <span>Projects</span></h2>
+
+                <div class="project-grid">
+
+                    <article class="project-card reveal">
+                        <div class="project-content">
+                            <h3>Mann-Vaasam</h3>
+                            <p class="subtitle">Farm-to-Home E-Commerce Platform</p>
+                            <p class="description">A platform connecting customers with farm products, with a responsive interface and WhatsApp-based ordering.</p>
+                            <div class="tech-stack"><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>MongoDB</span></div>
+                            <div class="project-links">
+                                <!-- TODO: add your real links -->
+                                <a href="https://github.com/Arivu-2005/mann-vaasam" class="btn-small" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
+                                <a href="https://arivu-2005.github.io/mann-vaasam/" class="btn-small btn-outline-small" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                                <button type="button" class="btn-small btn-ghost-small" data-case="mann-vaasam"><i class="fas fa-book-open"></i> Case Study</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card reveal">
+                        <div class="project-content">
+                            <h3>Glauco Vision</h3>
+                            <p class="subtitle">Glaucoma Detection Web App (Published, IEEE ICICCS 2026)</p>
+                            <p class="description">Early glaucoma detection from retinal images using a Vision Transformer, served through a Flask web app.</p>
+                            <div class="tech-stack"><span>HTML5/CSS3/JS</span><span>Flask</span><span>Python</span><span>Vision Transformer</span></div>
+                            <div class="project-links">
+                                <!-- TODO: add your real links -->
+                                <a href="https://github.com/Arivu-2005/glucovision" class="btn-small" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
+                                <a href="#" class="btn-small btn-outline-small" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                                <button type="button" class="btn-small btn-ghost-small" data-case="glauco-vision"><i class="fas fa-book-open"></i> Case Study</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card reveal">
+                        <div class="project-content">
+                            <h3>Revived Goods</h3>
+                            <p class="subtitle">Sustainable E-Commerce Website</p>
+                            <p class="description">A digital platform promoting refurbished and eco-friendly products with responsive product layouts.</p>
+                            <div class="tech-stack"><span>Frontend Dev</span><span>Responsive Web Design</span></div>
+                            <div class="project-links">
+                                <!-- TODO: add your real links -->
+                                <a href="#" class="btn-small" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
+                                <a href="#" class="btn-small btn-outline-small" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                                <button type="button" class="btn-small btn-ghost-small" data-case="revived-goods"><i class="fas fa-book-open"></i> Case Study</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card reveal">
+                        <div class="project-content">
+                            <h3>Employee Management System</h3>
+                            <p class="subtitle">Data Management Application</p>
+                            <p class="description">A Python console application with full CRUD for employee records, built with object-oriented design.</p>
+                            <div class="tech-stack"><span>Python</span><span>OOP</span><span>CRUD</span></div>
+                            <div class="project-links">
+                                <!-- TODO: add your real links -->
+                                <a href="https://github.com/Arivu-2005/employee-management-system" class="btn-small" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
+                                <a href="https://arivu-2005.github.io/employee-management-system/" class="btn-small btn-outline-small" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                                <button type="button" class="btn-small btn-ghost-small" data-case="employee-management"><i class="fas fa-book-open"></i> Case Study</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card reveal">
+                        <div class="project-content">
+                            <h3>Python Bank ATM System</h3>
+                            <p class="subtitle">Banking Simulation App</p>
+                            <p class="description">Simulates ATM operations: PIN login, balance inquiry, withdrawal, deposit, and transaction handling.</p>
+                            <div class="tech-stack"><span>Python</span><span>OOP</span></div>
+                            <div class="project-links">
+                                <!-- TODO: add your real links -->
+                                <a href="https://github.com/Arivu-2005/securebank-atm-simulator" class="btn-small" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
+                                <a href="https://arivu-2005.github.io/securebank-atm-simulator/" class="btn-small btn-outline-small" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                                <button type="button" class="btn-small btn-ghost-small" data-case="bank-atm"><i class="fas fa-book-open"></i> Case Study</button>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+
+                <!-- Case study pop-ups (opened by the "Case Study" buttons) -->
+
+            <dialog class="case-modal" id="case-mann-vaasam" aria-labelledby="title-mann-vaasam">
+                <button type="button" class="case-close" aria-label="Close case study"><i class="fas fa-times"></i></button>
+                <h3 id="title-mann-vaasam">Mann-Vaasam</h3>
+                <p class="subtitle">Farm-to-Home E-Commerce Platform</p>
+                <div class="tech-stack"><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>MongoDB</span></div>
+
+                <h4>Overview</h4>
+                <p>A farm-to-home e-commerce website that lets customers browse farm products and order directly.</p>
+
+                <h4>The problem</h4>
+                <p>Buying farm products directly is hard for customers: there is rarely one place to see what is available and order easily.</p>
+
+                <h4>What I built</h4>
+                <ul><li>Responsive product pages that work on phones and desktops</li><li>Clear product presentation so customers can compare items quickly</li><li>WhatsApp-based ordering, so customers order without creating an account</li><li>MongoDB for storing product data</li></ul>
+
+                <h4>My role</h4>
+                <p>Designed and developed the interface and ordering flow.</p>
+
+                <!-- TODO: add "Results" (users, speed, accuracy, what you learned) and screenshots -->
+                <div class="case-actions">
+                    <a href="#" class="btn-small" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
+                    <a href="#" class="btn-small btn-outline-small" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                </div>
+            </dialog>
+
+            <dialog class="case-modal" id="case-glauco-vision" aria-labelledby="title-glauco-vision">
+                <button type="button" class="case-close" aria-label="Close case study"><i class="fas fa-times"></i></button>
+                <h3 id="title-glauco-vision">Glauco Vision</h3>
+                <p class="subtitle">Glaucoma Detection Web App (Published, IEEE ICICCS 2026)</p>
+                <div class="tech-stack"><span>HTML5/CSS3/JS</span><span>Flask</span><span>Python</span><span>Vision Transformer</span></div>
+
+                <h4>Overview</h4>
+                <p>A web application for early detection of glaucoma from retinal image analysis. The research was published and presented at IEEE ICICCS 2026.</p>
+
+                <h4>The problem</h4>
+                <p>Glaucoma can damage vision before symptoms are noticed, so early screening matters. The goal was to make a trained model easy to use from a browser.</p>
+
+                <h4>What I built</h4>
+                <ul><li>Image upload interface for retinal images</li><li>Python/Flask backend that sends the image to a Vision Transformer (ViT) model</li><li>Result display for the prediction</li></ul>
+
+                <h4>My role</h4>
+                <p>Built the frontend upload interface and integrated the Flask backend with the ViT model.</p>
+
+                <!-- TODO: add "Results" (users, speed, accuracy, what you learned) and screenshots -->
+                <div class="case-actions">
+                    <a href="#" class="btn-small" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
+                    <a href="#" class="btn-small btn-outline-small" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                </div>
+            </dialog>
+
+            <dialog class="case-modal" id="case-revived-goods" aria-labelledby="title-revived-goods">
+                <button type="button" class="case-close" aria-label="Close case study"><i class="fas fa-times"></i></button>
+                <h3 id="title-revived-goods">Revived Goods</h3>
+                <p class="subtitle">Sustainable E-Commerce Website</p>
+                <div class="tech-stack"><span>Frontend Dev</span><span>Responsive Web Design</span></div>
+
+                <h4>Overview</h4>
+                <p>An e-commerce website focused on refurbished and eco-friendly products.</p>
+
+                <h4>The problem</h4>
+                <p>Sustainable and second-hand products are often hidden inside general marketplaces. This site puts them first.</p>
+
+                <h4>What I built</h4>
+                <ul><li>Responsive product grid layouts</li><li>Reusable user interface components</li><li>Mobile-first design that scales up to desktop</li></ul>
+
+                <h4>My role</h4>
+                <p>Built the frontend: product layouts and UI components.</p>
+
+                <!-- TODO: add "Results" (users, speed, accuracy, what you learned) and screenshots -->
+                <div class="case-actions">
+                    <a href="#" class="btn-small" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
+                    <a href="#" class="btn-small btn-outline-small" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                </div>
+            </dialog>
+
+            <dialog class="case-modal" id="case-employee-management" aria-labelledby="title-employee-management">
+                <button type="button" class="case-close" aria-label="Close case study"><i class="fas fa-times"></i></button>
+                <h3 id="title-employee-management">Employee Management System</h3>
+                <p class="subtitle">Data Management Application</p>
+                <div class="tech-stack"><span>Python</span><span>OOP</span><span>CRUD</span></div>
+
+                <h4>Overview</h4>
+                <p>A console application that simplifies maintaining employee records.</p>
+
+                <h4>The problem</h4>
+                <p>Keeping employee details in scattered notes or sheets is slow and error-prone. This gives one place to manage them.</p>
+
+                <h4>What I built</h4>
+                <ul><li>Create new employee records</li><li>View all or individual records</li><li>Update existing details</li><li>Delete records</li><li>Object-oriented structure with classes for employee data</li></ul>
+
+                <h4>My role</h4>
+                <p>Designed the class structure and implemented all four CRUD operations.</p>
+
+                <!-- TODO: add "Results" (users, speed, accuracy, what you learned) and screenshots -->
+                <div class="case-actions">
+                    <a href="#" class="btn-small" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
+                    <a href="#" class="btn-small btn-outline-small" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                </div>
+            </dialog>
+
+            <dialog class="case-modal" id="case-bank-atm" aria-labelledby="title-bank-atm">
+                <button type="button" class="case-close" aria-label="Close case study"><i class="fas fa-times"></i></button>
+                <h3 id="title-bank-atm">Python Bank ATM System</h3>
+                <p class="subtitle">Banking Simulation App</p>
+                <div class="tech-stack"><span>Python</span><span>OOP</span></div>
+
+                <h4>Overview</h4>
+                <p>A console simulation of a bank ATM.</p>
+
+                <h4>The problem</h4>
+                <p>Practise modelling a real-world system, including security checks and money handling, using object-oriented programming.</p>
+
+                <h4>What I built</h4>
+                <ul><li>PIN authentication before any action</li><li>Balance inquiry</li><li>Cash withdrawal with balance checks</li><li>Deposits</li><li>Transaction handling</li></ul>
+
+                <h4>My role</h4>
+                <p>Designed and coded the whole application.</p>
+
+                <!-- TODO: add "Results" (users, speed, accuracy, what you learned) and screenshots -->
+                <div class="case-actions">
+                    <a href="#" class="btn-small" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
+                    <a href="#" class="btn-small btn-outline-small" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                </div>
+            </dialog>
+
+            </div>
+        </section>
+
+        <!-- ========== CERTIFICATIONS ========== -->
+        <section id="certifications" class="section">
+            <div class="container">
+                <h2 class="section-title reveal">Certifications &amp; <span>Achievements</span></h2>
+
+                <div class="cert-grid">
+                    <div class="cert-card reveal">
+                        <div class="cert-icon"><i class="fas fa-certificate"></i></div>
+                        <div class="cert-info">
+                            <h3>Full Stack Development Training</h3>
+                            <p class="issuer">Hackwit Technologies</p>
+                            <p class="cert-desc">
+                                Hands-on training in Full Stack Web Development. Built an e-commerce
+                                website applying frontend and backend concepts.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="cert-card reveal">
+                        <div class="cert-icon"><i class="fas fa-trophy"></i></div>
+                        <div class="cert-info">
+                            <h3>Research &amp; Publication (IEEE)</h3>
+                            <p class="issuer">ICICCS 2026</p>
+                            <p class="cert-desc">
+                                <strong>Glauco Vision: Early Detection System of Glaucoma Using Vision Transformer.</strong>
+                                Published and presented research on retinal image analysis using a ViT model.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== CONTACT ========== -->
+        <section id="contact" class="section bg-secondary">
+            <div class="container">
+                <h2 class="section-title reveal">Get In <span>Touch</span></h2>
+
+                <div class="contact-wrapper">
+
+                    <div class="contact-info reveal">
+                        <h3>Contact Information</h3>
+                        <p>Feel free to reach out for entry-level opportunities, collaborations, or just to say hi!</p>
+
+                        <div class="info-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <!-- TODO: your real email -->
+                                <p><a href="mailto:your.email@gmail.com">arivazhaganmani78@gmail.com</a></p>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <i class="fas fa-phone-alt"></i>
+                            <div>
+                                <h4>Phone</h4>
+                                <!-- TODO: your real phone number -->
+                                <p>+91 74186 79629</p>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Location</h4>
+                                <p>Chennai, Tamil Nadu, India</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-socials">
+                            <a href="https://github.com/Arivu-2005/Arivu-2005" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                            <a href="https://www.linkedin.com/in/arivazhaganmani/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-container reveal">
+                        <form id="contactForm" class="contact-form">
+                            <p class="form-note">
+                                <i class="fas fa-info-circle"></i>
+                                Sending opens your email app with the message ready to send.
+                            </p>
+
+                            <div class="input-group">
+                                <label for="name" class="sr-only">Your name</label>
+                                <input type="text" id="name" required placeholder="Your Name">
+                            </div>
+                            <div class="input-group">
+                                <label for="email" class="sr-only">Your email</label>
+                                <input type="email" id="email" required placeholder="Your Email">
+                            </div>
+                            <div class="input-group">
+                                <label for="subject" class="sr-only">Subject</label>
+                                <input type="text" id="subject" required placeholder="Subject">
+                            </div>
+                            <div class="input-group">
+                                <label for="message" class="sr-only">Your message</label>
+                                <textarea id="message" rows="5" required placeholder="Your Message"></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-submit">
+                                Send Message <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ========== FOOTER ========== -->
+    <footer>
+        <div class="container">
+            <p>&copy; <span id="year">2026</span> Arivazhagan M. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <a href="#home" id="backToTop" class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>
