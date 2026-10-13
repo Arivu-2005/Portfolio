@@ -1,103 +1,163 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Arivazhagan M | Full Stack Developer Portfolio</title>
-    <meta name="description" content="Portfolio of Arivazhagan M, Full Stack and Frontend Developer.">
-    <meta name="theme-color" content="#0f172a">
+    <meta name="description" content="Portfolio of Arivazhagan M, Full Stack and Frontend Developer. React.js, Python, Flask, MongoDB. IEEE ICICCS 2026 author.">
+    <meta name="theme-color" content="#04171a">
+    <meta property="og:title" content="Arivazhagan M | Full Stack Developer">
+    <meta property="og:description" content="Responsive web apps with React, Python, Flask and MongoDB. Author of Glauco Vision, presented at IEEE ICICCS 2026.">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%2304171a' stroke='%23d6b36a' stroke-width='3'/%3E%3Ctext x='32' y='41' font-family='serif' font-size='26' font-style='italic' text-anchor='middle' fill='%23e8f0ed'%3EAM%3C/text%3E%3C/svg%3E">
 
     <!-- Fonts + icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,700;1,6..96,400;1,6..96,500&family=Sora:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <!-- Your styles -->
     <link rel="stylesheet" href="style.css">
 
-    <!-- If JavaScript is off, show everything (otherwise .reveal items stay hidden) -->
-    <noscript><style>.reveal { opacity: 1 !important; transform: none !important; }</style></noscript>
+    <!-- No JavaScript: hide the loader, show everything -->
+    <noscript><style>
+        .loader{display:none!important}
+        body.is-loading{overflow:auto!important}
+        .reveal,.hero .rise,.hero .line>span{opacity:1!important;transform:none!important;clip-path:none!important}
+    </style></noscript>
 </head>
 
-<body>
-    <a href="#home" class="skip-link">Skip to content</a>
+<body class="is-loading">
+
+    <!-- ========== LOADER ========== -->
+    <div class="loader" id="loader" role="status" aria-live="polite" aria-label="Loading portfolio">
+        <div class="loader-stage">
+            <svg class="loader-mark" viewBox="0 0 200 200" aria-hidden="true">
+                <circle class="ring r1" cx="100" cy="100" r="92" pathLength="1"/>
+                <circle class="ring r2" cx="100" cy="100" r="78" pathLength="1"/>
+                <g class="glyph" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path pathLength="1" d="M52 126 L72 78 L92 126 M60 108 H84"/>
+                    <path pathLength="1" d="M106 126 V78 L124 108 L142 78 V126"/>
+                </g>
+            </svg>
+            <p class="loader-name">Arivazhagan M</p>
+            <p class="loader-role">Full Stack Developer</p>
+            <div class="loader-meter" aria-hidden="true"><i id="loaderBar"></i></div>
+            <p class="loader-count"><span id="loaderCount">0</span>%</p>
+        </div>
+    </div>
+
+    <a href="#main" class="skip-link">Skip to content</a>
+    <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+    <div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
 
     <!-- ========== NAVBAR ========== -->
-    <nav class="navbar" id="navbar">
+    <header class="navbar" id="navbar">
         <div class="container nav-container">
-            <a href="#home" class="logo">Arivazhagan <span>M</span></a>
+            <a href="#home" class="logo" aria-label="Arivazhagan M, home">
+                <span class="logo-mark">AM</span>
+                <span class="logo-text">Arivazhagan M</span>
+            </a>
 
-            <ul class="nav-links" id="navLinks">
-                <li><a href="#home" class="active">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#certifications">Achievements</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+            <nav aria-label="Primary">
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#certifications">Achievements</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
 
-            <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
-                <i class="fas fa-bars"></i>
-            </button>
+            <div class="nav-tools">
+                <button type="button" class="tool-btn" id="paletteBtn" aria-label="Open quick navigation (Ctrl or Command + K)" title="Quick navigation (Ctrl/Cmd + K)">
+                    <i class="fas fa-magnifying-glass"></i><span class="kbd">Ctrl K</span>
+                </button>
+                <button type="button" class="tool-btn" id="themeBtn" aria-label="Switch to light theme" title="Switch theme">
+                    <i class="fas fa-circle-half-stroke"></i>
+                </button>
+                <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
+                    <span></span><span></span>
+                </button>
+            </div>
         </div>
-    </nav>
+    </header>
 
-    <main>
+    <main id="main">
         <!-- ========== HOME ========== -->
-        <section id="home" class="hero">
-            <div class="container hero-container">
+        <section id="home" class="hero" aria-labelledby="heroName">
+            <div class="hero-lattice" aria-hidden="true"></div>
+            <div class="hero-lattice lit" aria-hidden="true"></div>
 
-                <div class="hero-content reveal">
-                    <p class="greeting">Hello, I'm</p>
-                    <h1 class="name">Arivazhagan M</h1>
-                    <h2 class="role">
-                        Full Stack Developer <span class="divider">|</span> Frontend Developer
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <p class="status rise" style="--d:.1s"><span class="pulse"></span>Open to entry-level roles in 2026</p>
+
+                    <p class="greeting rise" style="--d:.2s">Hello, I'm</p>
+                    <h1 class="name" id="heroName">
+                        <span class="line"><span style="--d:.25s">Arivazhagan</span></span>
+                        <span class="line"><span style="--d:.4s">M</span></span>
+                    </h1>
+                    <h2 class="role rise" style="--d:.6s">
+                        Full Stack Developer <span class="divider" aria-hidden="true">|</span> Frontend Developer
                     </h2>
-                    <p class="summary">
+                    <p class="summary rise" style="--d:.7s">
                         B.Tech Information Technology graduate with hands-on experience building
                         responsive web applications using React.js, Python, Flask, and MongoDB.
                         Passionate about user-friendly interfaces and scalable backend solutions.
                     </p>
 
-                    <div class="hero-buttons">
-                        <a href="#projects" class="btn btn-primary">View My Work</a>
-                        <a href="#contact" class="btn btn-outline">Contact Me</a>
+                    <div class="hero-buttons rise" style="--d:.8s">
+                        <a href="#projects" class="btn btn-primary magnetic"><span>View my work</span><i class="fas fa-arrow-down-long"></i></a>
+                        <a href="#contact" class="btn btn-outline magnetic"><span>Contact me</span></a>
                     </div>
 
-                    <div class="social-links">
-                        <a href="https://github.com/Arivu-2005" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                        <!-- TODO: replace "yourname" with your real LinkedIn username -->
-                        <a href="https://www.linkedin.com/in/arivazhaganmani/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                        <!-- TODO: replace with your real email -->
-                        <a href="mailto:your.email@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                    <div class="social-links rise" style="--d:.9s">
+                        <a href="https://github.com/Arivu-2005" target="_blank" rel="noopener" aria-label="GitHub (opens in new tab)"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/arivazhaganmani/" target="_blank" rel="noopener" aria-label="LinkedIn (opens in new tab)"><i class="fab fa-linkedin"></i></a>
+                        <a href="mailto:ariv@gmail.com" data-email-link aria-label="Email"><i class="fas fa-envelope"></i></a>
                     </div>
                 </div>
 
-                <div class="hero-image-container reveal">
-                    <div class="image-wrapper" id="imageWrapper">
-                        <!-- Put your photo next to this file and name it profile.jpg -->
-                        <img src="profile.jpg" alt="Photo of Arivazhagan M" class="profile-photo" id="profilePhoto">
+                <div class="hero-image-container rise" style="--d:.5s">
+                    <div class="lens" id="imageWrapper">
+                        <div class="lens-ring lens-ticks" aria-hidden="true"></div>
+                        <div class="lens-ring lens-dash" aria-hidden="true"></div>
+                        <div class="lens-photo" id="lensPhoto">
+                            <span class="lens-initials" aria-hidden="true">AM</span>
+                            <!-- Put your photo next to this file and name it profile.jpg -->
+                            <img src="profile.jpg" alt="Photo of Arivazhagan M" class="profile-photo" id="profilePhoto" width="520" height="520" decoding="async">
+                        </div>
+                        <p class="lens-badge">Published at IEEE ICICCS 2026</p>
                     </div>
                 </div>
+            </div>
 
+            <div class="container">
+                <dl class="hero-facts rise" style="--d:1s">
+                    <div><dt>CGPA</dt><dd data-count="7.6" data-decimals="1">7.6</dd></div>
+                    <div><dt>Projects built</dt><dd data-count="5">5</dd></div>
+                    <div><dt>IEEE publication</dt><dd data-count="1">1</dd></div>
+                    <div><dt>Internship</dt><dd data-count="1">1</dd></div>
+                </dl>
             </div>
         </section>
 
         <!-- ========== ABOUT ========== -->
         <section id="about" class="section">
-            <div class="container">
-                <h2 class="section-title reveal">About <span>Me</span></h2>
+            <div class="container split">
+                <h2 class="section-title reveal">About me</h2>
 
-                <div class="about-content reveal">
-                    <p class="about-text">
+                <div class="about-content">
+                    <p class="about-text reveal">
                         I am an upcoming IT graduate seeking an entry-level Full Stack Developer role.
                         I work on both frontend and backend, and I have built responsive e-commerce
                         platforms and web applications with modern tech stacks.
                     </p>
 
-                    <div class="education-card">
+                    <div class="education-card reveal">
                         <h3><i class="fas fa-graduation-cap"></i> Education</h3>
 
                         <h4>B.Tech – Information Technology</h4>
@@ -105,7 +165,7 @@
                         <p class="highlight">2022 – 2026</p>
                         <p class="highlight">CGPA: 7.6 / 10.0</p>
                         <p class="coursework">
-                            <strong>Relevant Coursework:</strong>
+                            <strong>Relevant coursework:</strong>
                             Object-Oriented Programming, Data Structures &amp; Algorithms,
                             Database Management Systems, SDLC.
                         </p>
@@ -116,83 +176,79 @@
 
         <!-- ========== SKILLS ========== -->
         <section id="skills" class="section bg-secondary">
-            <div class="container">
-                <h2 class="section-title reveal">Technical <span>Skills</span></h2>
+            <div class="container split">
+                <h2 class="section-title reveal">Technical skills</h2>
 
-                <!--
-                    HOW SKILL BARS WORK:
-                    data-level="90" => bar fills to 90% when it scrolls into view (script.js)
-                -->
                 <div class="skills-grid">
-
                     <div class="skill-category reveal">
-                        <h3><i class="fas fa-laptop-code"></i> Frontend Development</h3>
+                        <h3><i class="fas fa-laptop-code"></i> Frontend development</h3>
 
                         <div class="skill-bar">
-                            <div class="skill-info"><span>HTML5 &amp; CSS3</span><span>90%</span></div>
-                            <div class="progress-line"><span data-level="90"></span></div>
+                            <div class="skill-info"><span>HTML5 &amp; CSS3</span><span data-pct="90">90%</span></div>
+                            <div class="progress-line" role="img" aria-label="HTML5 and CSS3, 90 percent"><span data-level="90"></span></div>
                         </div>
                         <div class="skill-bar">
-                            <div class="skill-info"><span>JavaScript</span><span>85%</span></div>
-                            <div class="progress-line"><span data-level="85"></span></div>
+                            <div class="skill-info"><span>JavaScript</span><span data-pct="85">85%</span></div>
+                            <div class="progress-line" role="img" aria-label="JavaScript, 85 percent"><span data-level="85"></span></div>
                         </div>
                         <div class="skill-bar">
-                            <div class="skill-info"><span>React.js</span><span>75%</span></div>
-                            <div class="progress-line"><span data-level="75"></span></div>
+                            <div class="skill-info"><span>React.js</span><span data-pct="75">75%</span></div>
+                            <div class="progress-line" role="img" aria-label="React.js, 75 percent"><span data-level="75"></span></div>
                         </div>
                         <div class="skill-bar">
-                            <div class="skill-info"><span>Bootstrap &amp; Responsive UI</span><span>85%</span></div>
-                            <div class="progress-line"><span data-level="85"></span></div>
+                            <div class="skill-info"><span>Bootstrap &amp; Responsive UI</span><span data-pct="85">85%</span></div>
+                            <div class="progress-line" role="img" aria-label="Bootstrap and responsive UI, 85 percent"><span data-level="85"></span></div>
                         </div>
                     </div>
 
                     <div class="skill-category reveal">
-                        <h3><i class="fas fa-server"></i> Backend &amp; Databases</h3>
+                        <h3><i class="fas fa-server"></i> Backend &amp; databases</h3>
 
                         <div class="skill-bar">
-                            <div class="skill-info"><span>Python</span><span>85%</span></div>
-                            <div class="progress-line"><span data-level="85"></span></div>
+                            <div class="skill-info"><span>Python</span><span data-pct="85">85%</span></div>
+                            <div class="progress-line" role="img" aria-label="Python, 85 percent"><span data-level="85"></span></div>
                         </div>
                         <div class="skill-bar">
-                            <div class="skill-info"><span>Flask</span><span>75%</span></div>
-                            <div class="progress-line"><span data-level="75"></span></div>
+                            <div class="skill-info"><span>Flask</span><span data-pct="75">75%</span></div>
+                            <div class="progress-line" role="img" aria-label="Flask, 75 percent"><span data-level="75"></span></div>
                         </div>
                         <div class="skill-bar">
-                            <div class="skill-info"><span>SQL &amp; MySQL</span><span>80%</span></div>
-                            <div class="progress-line"><span data-level="80"></span></div>
+                            <div class="skill-info"><span>SQL &amp; MySQL</span><span data-pct="80">80%</span></div>
+                            <div class="progress-line" role="img" aria-label="SQL and MySQL, 80 percent"><span data-level="80"></span></div>
                         </div>
                         <div class="skill-bar">
-                            <div class="skill-info"><span>MongoDB</span><span>75%</span></div>
-                            <div class="progress-line"><span data-level="75"></span></div>
+                            <div class="skill-info"><span>MongoDB</span><span data-pct="75">75%</span></div>
+                            <div class="progress-line" role="img" aria-label="MongoDB, 75 percent"><span data-level="75"></span></div>
                         </div>
                     </div>
 
                     <div class="skill-category full-width reveal">
-                        <h3><i class="fas fa-tools"></i> Tools &amp; Core Concepts</h3>
-                        <div class="tags-container">
-                            <span class="skill-tag">Object-Oriented Programming (OOP)</span>
-                            <span class="skill-tag">Data Structures &amp; Algorithms</span>
-                            <span class="skill-tag">DBMS</span>
-                            <span class="skill-tag">CRUD Operations</span>
-                            <span class="skill-tag">Git</span>
-                            <span class="skill-tag">GitHub</span>
-                            <span class="skill-tag">VS Code</span>
-                            <span class="skill-tag">SDLC</span>
-                        </div>
+                        <h3><i class="fas fa-tools"></i> Tools &amp; core concepts</h3>
+                        <ul class="tags-container">
+                            <li class="skill-tag">Object-Oriented Programming (OOP)</li>
+                            <li class="skill-tag">Data Structures &amp; Algorithms</li>
+                            <li class="skill-tag">DBMS</li>
+                            <li class="skill-tag">CRUD Operations</li>
+                            <li class="skill-tag">Git</li>
+                            <li class="skill-tag">GitHub</li>
+                            <li class="skill-tag">VS Code</li>
+                            <li class="skill-tag">SDLC</li>
+                        </ul>
                     </div>
-
                 </div>
             </div>
         </section>
 
         <!-- ========== EXPERIENCE ========== -->
         <section id="experience" class="section">
-            <div class="container">
-                <h2 class="section-title reveal">Work <span>Experience</span></h2>
+            <div class="container split">
+                <h2 class="section-title reveal">Work experience</h2>
 
-                <div class="timeline">
+                <div class="timeline" id="timeline">
+                    <div class="timeline-line" aria-hidden="true"><i id="timelineFill"></i></div>
+
                     <div class="timeline-item reveal">
-                        <div class="timeline-dot"></div>
+                        <div class="timeline-dot" aria-hidden="true"></div>
 
                         <div class="timeline-content">
                             <div class="timeline-header">
@@ -216,19 +272,30 @@
 
         <!-- ========== PROJECTS ========== -->
         <section id="projects" class="section bg-secondary">
-            <div class="container">
-                <h2 class="section-title reveal">Featured <span>Projects</span></h2>
+            <div class="container split">
+                <div class="section-head">
+                    <h2 class="section-title reveal">Featured projects</h2>
+                    <div class="filters reveal" role="group" aria-label="Filter projects">
+                        <button type="button" class="filter is-active" data-filter="all" aria-pressed="true">All</button>
+                        <button type="button" class="filter" data-filter="web" aria-pressed="false">Web</button>
+                        <button type="button" class="filter" data-filter="python" aria-pressed="false">Python</button>
+                        <button type="button" class="filter" data-filter="research" aria-pressed="false">Research</button>
+                    </div>
+                </div>
 
-                <div class="project-grid">
+                <div class="project-grid" id="projectGrid">
 
-                    <article class="project-card reveal">
+                    <article class="project-card reveal" data-cat="web">
                         <div class="project-content">
-                            <h3>Mann-Vaasam</h3>
-                            <p class="subtitle">Farm-to-Home E-Commerce Platform</p>
-                            <p class="description">A platform connecting customers with farm products, with a responsive interface and WhatsApp-based ordering.</p>
-                            <div class="tech-stack"><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>MongoDB</span></div>
+                            <div class="project-title">
+                                <h3>Mann-Vaasam</h3>
+                                <p class="subtitle">Farm-to-Home E-Commerce Platform</p>
+                            </div>
+                            <div class="project-body">
+                                <p class="description">A platform connecting customers with farm products, with a responsive interface and WhatsApp-based ordering.</p>
+                                <div class="tech-stack"><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>MongoDB</span></div>
+                            </div>
                             <div class="project-links">
-                                <!-- TODO: add your real links -->
                                 <a href="https://github.com/Arivu-2005/mann-vaasam" class="btn-small" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
                                 <a href="https://arivu-2005.github.io/mann-vaasam/" class="btn-small btn-outline-small" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> Live Demo</a>
                                 <button type="button" class="btn-small btn-ghost-small" data-case="mann-vaasam"><i class="fas fa-book-open"></i> Case Study</button>
@@ -236,14 +303,18 @@
                         </div>
                     </article>
 
-                    <article class="project-card reveal">
+                    <article class="project-card is-featured reveal" data-cat="research web python">
                         <div class="project-content">
-                            <h3>Glauco Vision</h3>
-                            <p class="subtitle">Glaucoma Detection Web App (Published, IEEE ICICCS 2026)</p>
-                            <p class="description">Early glaucoma detection from retinal images using a Vision Transformer, served through a Flask web app.</p>
-                            <div class="tech-stack"><span>HTML5/CSS3/JS</span><span>Flask</span><span>Python</span><span>Vision Transformer</span></div>
+                            <div class="project-title">
+                                <h3>Glauco Vision</h3>
+                                <p class="subtitle">Glaucoma Detection Web App</p>
+                                <p class="pub-badge"><i class="fas fa-award"></i> Published, IEEE ICICCS 2026</p>
+                            </div>
+                            <div class="project-body">
+                                <p class="description">Early glaucoma detection from retinal images using a Vision Transformer, served through a Flask web app.</p>
+                                <div class="tech-stack"><span>HTML5/CSS3/JS</span><span>Flask</span><span>Python</span><span>Vision Transformer</span></div>
+                            </div>
                             <div class="project-links">
-                                <!-- TODO: add your real links -->
                                 <a href="https://github.com/Arivu-2005/glucovision" class="btn-small" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
                                 <a href="#" class="btn-small btn-outline-small" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> Live Demo</a>
                                 <button type="button" class="btn-small btn-ghost-small" data-case="glauco-vision"><i class="fas fa-book-open"></i> Case Study</button>
@@ -251,14 +322,17 @@
                         </div>
                     </article>
 
-                    <article class="project-card reveal">
+                    <article class="project-card reveal" data-cat="web">
                         <div class="project-content">
-                            <h3>Revived Goods</h3>
-                            <p class="subtitle">Sustainable E-Commerce Website</p>
-                            <p class="description">A digital platform promoting refurbished and eco-friendly products with responsive product layouts.</p>
-                            <div class="tech-stack"><span>Frontend Dev</span><span>Responsive Web Design</span></div>
+                            <div class="project-title">
+                                <h3>Revived Goods</h3>
+                                <p class="subtitle">Sustainable E-Commerce Website</p>
+                            </div>
+                            <div class="project-body">
+                                <p class="description">A digital platform promoting refurbished and eco-friendly products with responsive product layouts.</p>
+                                <div class="tech-stack"><span>Frontend Dev</span><span>Responsive Web Design</span></div>
+                            </div>
                             <div class="project-links">
-                                <!-- TODO: add your real links -->
                                 <a href="#" class="btn-small" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
                                 <a href="#" class="btn-small btn-outline-small" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> Live Demo</a>
                                 <button type="button" class="btn-small btn-ghost-small" data-case="revived-goods"><i class="fas fa-book-open"></i> Case Study</button>
@@ -266,14 +340,17 @@
                         </div>
                     </article>
 
-                    <article class="project-card reveal">
+                    <article class="project-card reveal" data-cat="python">
                         <div class="project-content">
-                            <h3>Employee Management System</h3>
-                            <p class="subtitle">Data Management Application</p>
-                            <p class="description">A Python console application with full CRUD for employee records, built with object-oriented design.</p>
-                            <div class="tech-stack"><span>Python</span><span>OOP</span><span>CRUD</span></div>
+                            <div class="project-title">
+                                <h3>Employee Management System</h3>
+                                <p class="subtitle">Data Management Application</p>
+                            </div>
+                            <div class="project-body">
+                                <p class="description">A Python console application with full CRUD for employee records, built with object-oriented design.</p>
+                                <div class="tech-stack"><span>Python</span><span>OOP</span><span>CRUD</span></div>
+                            </div>
                             <div class="project-links">
-                                <!-- TODO: add your real links -->
                                 <a href="https://github.com/Arivu-2005/employee-management-system" class="btn-small" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
                                 <a href="https://arivu-2005.github.io/employee-management-system/" class="btn-small btn-outline-small" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> Live Demo</a>
                                 <button type="button" class="btn-small btn-ghost-small" data-case="employee-management"><i class="fas fa-book-open"></i> Case Study</button>
@@ -281,14 +358,17 @@
                         </div>
                     </article>
 
-                    <article class="project-card reveal">
+                    <article class="project-card reveal" data-cat="python">
                         <div class="project-content">
-                            <h3>Python Bank ATM System</h3>
-                            <p class="subtitle">Banking Simulation App</p>
-                            <p class="description">Simulates ATM operations: PIN login, balance inquiry, withdrawal, deposit, and transaction handling.</p>
-                            <div class="tech-stack"><span>Python</span><span>OOP</span></div>
+                            <div class="project-title">
+                                <h3>Python Bank ATM System</h3>
+                                <p class="subtitle">Banking Simulation App</p>
+                            </div>
+                            <div class="project-body">
+                                <p class="description">Simulates ATM operations: PIN login, balance inquiry, withdrawal, deposit, and transaction handling.</p>
+                                <div class="tech-stack"><span>Python</span><span>OOP</span></div>
+                            </div>
                             <div class="project-links">
-                                <!-- TODO: add your real links -->
                                 <a href="https://github.com/Arivu-2005/securebank-atm-simulator" class="btn-small" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
                                 <a href="https://arivu-2005.github.io/securebank-atm-simulator/" class="btn-small btn-outline-small" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> Live Demo</a>
                                 <button type="button" class="btn-small btn-ghost-small" data-case="bank-atm"><i class="fas fa-book-open"></i> Case Study</button>
@@ -297,8 +377,10 @@
                     </article>
 
                 </div>
+                <p class="empty-note" id="emptyNote" hidden>No projects in this category yet.</p>
+            </div>
 
-                <!-- Case study pop-ups (opened by the "Case Study" buttons) -->
+            <!-- Case study pop-ups (links are synced from the project cards by script.js) -->
 
             <dialog class="case-modal" id="case-mann-vaasam" aria-labelledby="title-mann-vaasam">
                 <button type="button" class="case-close" aria-label="Close case study"><i class="fas fa-times"></i></button>
@@ -343,7 +425,6 @@
                 <h4>My role</h4>
                 <p>Built the frontend upload interface and integrated the Flask backend with the ViT model.</p>
 
-                <!-- TODO: add "Results" (users, speed, accuracy, what you learned) and screenshots -->
                 <div class="case-actions">
                     <a href="#" class="btn-small" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
                     <a href="#" class="btn-small btn-outline-small" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> Live Demo</a>
@@ -368,7 +449,6 @@
                 <h4>My role</h4>
                 <p>Built the frontend: product layouts and UI components.</p>
 
-                <!-- TODO: add "Results" (users, speed, accuracy, what you learned) and screenshots -->
                 <div class="case-actions">
                     <a href="#" class="btn-small" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
                     <a href="#" class="btn-small btn-outline-small" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> Live Demo</a>
@@ -393,7 +473,6 @@
                 <h4>My role</h4>
                 <p>Designed the class structure and implemented all four CRUD operations.</p>
 
-                <!-- TODO: add "Results" (users, speed, accuracy, what you learned) and screenshots -->
                 <div class="case-actions">
                     <a href="#" class="btn-small" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
                     <a href="#" class="btn-small btn-outline-small" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> Live Demo</a>
@@ -418,20 +497,17 @@
                 <h4>My role</h4>
                 <p>Designed and coded the whole application.</p>
 
-                <!-- TODO: add "Results" (users, speed, accuracy, what you learned) and screenshots -->
                 <div class="case-actions">
                     <a href="#" class="btn-small" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
                     <a href="#" class="btn-small btn-outline-small" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> Live Demo</a>
                 </div>
             </dialog>
-
-            </div>
         </section>
 
         <!-- ========== CERTIFICATIONS ========== -->
         <section id="certifications" class="section">
-            <div class="container">
-                <h2 class="section-title reveal">Certifications &amp; <span>Achievements</span></h2>
+            <div class="container split">
+                <h2 class="section-title reveal">Certifications &amp; achievements</h2>
 
                 <div class="cert-grid">
                     <div class="cert-card reveal">
@@ -464,20 +540,19 @@
         <!-- ========== CONTACT ========== -->
         <section id="contact" class="section bg-secondary">
             <div class="container">
-                <h2 class="section-title reveal">Get In <span>Touch</span></h2>
+                <h2 class="section-title contact-title reveal">Let's build something together.</h2>
 
                 <div class="contact-wrapper">
 
                     <div class="contact-info reveal">
-                        <h3>Contact Information</h3>
-                        <p>Feel free to reach out for entry-level opportunities, collaborations, or just to say hi!</p>
+                        <p class="contact-lead">Feel free to reach out for entry-level opportunities, collaborations, or just to say hi!</p>
 
                         <div class="info-item">
                             <i class="fas fa-envelope"></i>
                             <div>
                                 <h4>Email</h4>
-                                <!-- TODO: your real email -->
-                                <p><a href="mailto:your.email@gmail.com">arivazhaganmani78@gmail.com</a></p>
+                                <p><a href="mailto:arivazhaganmani@gmail.com" data-email-link data-email-text>arivazhaganmani@gmail.com</a>
+                                   <button type="button" class="copy-btn" id="copyEmail" aria-label="Copy email address"><i class="far fa-copy"></i> Copy</button></p>
                             </div>
                         </div>
 
@@ -485,8 +560,7 @@
                             <i class="fas fa-phone-alt"></i>
                             <div>
                                 <h4>Phone</h4>
-                                <!-- TODO: your real phone number -->
-                                <p>+91 74186 79629</p>
+                                <p><a href="tel:+91 74186 79629">+91 74186 79629</a></p>
                             </div>
                         </div>
 
@@ -494,42 +568,46 @@
                             <i class="fas fa-map-marker-alt"></i>
                             <div>
                                 <h4>Location</h4>
-                                <p>Chennai, Tamil Nadu, India</p>
+                                <p>Chennai, Tamil Nadu, India <span class="local-time" id="localTime" aria-label="Local time"></span></p>
                             </div>
                         </div>
 
                         <div class="contact-socials">
-                            <a href="https://github.com/Arivu-2005/Arivu-2005" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                            <a href="https://www.linkedin.com/in/arivazhaganmani/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://github.com/Arivu-2005/Arivu-2005" target="_blank" rel="noopener" aria-label="GitHub (opens in new tab)"><i class="fab fa-github"></i></a>
+                            <a href="https://www.linkedin.com/in/arivazhaganmani/" target="_blank" rel="noopener" aria-label="LinkedIn (opens in new tab)"><i class="fab fa-linkedin-in"></i></a>
                         </div>
                     </div>
 
                     <div class="contact-form-container reveal">
-                        <form id="contactForm" class="contact-form">
+                        <form id="contactForm" class="contact-form" novalidate>
                             <p class="form-note">
                                 <i class="fas fa-info-circle"></i>
                                 Sending opens your email app with the message ready to send.
                             </p>
 
                             <div class="input-group">
-                                <label for="name" class="sr-only">Your name</label>
-                                <input type="text" id="name" required placeholder="Your Name">
+                                <input type="text" id="name" name="name" required placeholder=" " autocomplete="name" aria-describedby="err-name">
+                                <label for="name">Your name</label>
+                                <span class="field-error" id="err-name" role="alert"></span>
                             </div>
                             <div class="input-group">
-                                <label for="email" class="sr-only">Your email</label>
-                                <input type="email" id="email" required placeholder="Your Email">
+                                <input type="email" id="email" name="email" required placeholder=" " autocomplete="email" aria-describedby="err-email">
+                                <label for="email">Your email</label>
+                                <span class="field-error" id="err-email" role="alert"></span>
                             </div>
                             <div class="input-group">
-                                <label for="subject" class="sr-only">Subject</label>
-                                <input type="text" id="subject" required placeholder="Subject">
+                                <input type="text" id="subject" name="subject" required placeholder=" " aria-describedby="err-subject">
+                                <label for="subject">Subject</label>
+                                <span class="field-error" id="err-subject" role="alert"></span>
                             </div>
                             <div class="input-group">
-                                <label for="message" class="sr-only">Your message</label>
-                                <textarea id="message" rows="5" required placeholder="Your Message"></textarea>
+                                <textarea id="message" name="message" rows="5" required placeholder=" " aria-describedby="err-message"></textarea>
+                                <label for="message">Your message</label>
+                                <span class="field-error" id="err-message" role="alert"></span>
                             </div>
 
-                            <button type="submit" class="btn btn-primary btn-submit">
-                                Send Message <i class="fas fa-paper-plane"></i>
+                            <button type="submit" class="btn btn-primary btn-submit magnetic">
+                                <span>Send message</span> <i class="fas fa-paper-plane"></i>
                             </button>
                         </form>
                     </div>
@@ -541,14 +619,35 @@
 
     <!-- ========== FOOTER ========== -->
     <footer>
-        <div class="container">
-            <p>&copy; <span id="year">2026</span> Arivazhagan M. All rights reserved.</p>
+        <div class="container footer-grid">
+            <p class="footer-mark" aria-hidden="true">Arivazhagan M</p>
+            <ul class="footer-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <p class="footer-copy">&copy; <span id="year">2026</span> Arivazhagan M. All rights reserved.</p>
         </div>
     </footer>
 
     <a href="#home" id="backToTop" class="back-to-top" aria-label="Back to top">
         <i class="fas fa-chevron-up"></i>
     </a>
+
+    <!-- ========== QUICK NAVIGATION (Ctrl/Cmd + K) ========== -->
+    <dialog class="palette" id="palette" aria-label="Quick navigation">
+        <div class="palette-box">
+            <div class="palette-search">
+                <i class="fas fa-magnifying-glass" aria-hidden="true"></i>
+                <input type="text" id="paletteInput" placeholder="Jump to a section or run an action" role="combobox" aria-expanded="true" aria-controls="paletteList" aria-autocomplete="list" autocomplete="off" spellcheck="false">
+            </div>
+            <ul class="palette-list" id="paletteList" role="listbox" aria-label="Results"></ul>
+            <p class="palette-hint">Use the up and down keys to move, Enter to select, Esc to close.</p>
+        </div>
+    </dialog>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
     <script src="script.js"></script>
 </body>
